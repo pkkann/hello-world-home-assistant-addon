@@ -1,6 +1,7 @@
 name: "Hello world"
 description: "My first real app!"
 version: "1.4.4"
+image: "ghcr.io/pkkann/hello-world-home-assistant-addon/{arch}"
 slug: "hello_world"
 init: false
 arch:
