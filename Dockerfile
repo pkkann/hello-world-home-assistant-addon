@@ -30,11 +30,7 @@ RUN apk add --no-cache \
 RUN mkdir -p /run/nginx /run/php /var/www/html
 COPY nginx.conf /etc/nginx/http.d/default.conf
 
-# Clone repository into a temp directory, move files, and clean up
-RUN git clone --depth 1 https://github.com/pkkann/hello-world.git /tmp/repo && \
-    cp -r /tmp/repo/. /var/www/html/ && \
-    rm -rf /tmp/repo /var/www/html/.git
-
+RUN "Hello World" >> /var/www/html/public/index.html
 WORKDIR /var/www/html
 
 # Copy Supervisor configuration
