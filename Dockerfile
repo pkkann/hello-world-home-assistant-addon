@@ -30,7 +30,7 @@ RUN apk add --no-cache \
 RUN mkdir -p /run/nginx /run/php /var/www/html
 COPY nginx.conf /etc/nginx/http.d/default.conf
 
-RUN "Hello World" >> /var/www/html/public/index.html
+COPY ./app /var/www/html
 WORKDIR /var/www/html
 
 # Copy Supervisor configuration
